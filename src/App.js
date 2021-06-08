@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import './App.css'
+import AutoComplete from './AutoComplete'
+import Counter from './Counter'
+import Fetch from './Fetch'
+// import detectHover from './HOC/detectHover'
+import Modal from './Modal'
+import Palindrome from './Palindrome'
+import Todo from './Todo'
 
-function App() {
+function App(props) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const style = {
+    backgroundColor: props.hovered ? 'red' : 'white'
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={style}>
+      <Counter />
+      <Fetch />
+      <AutoComplete />
+      <Todo />
+      <Palindrome />
+      <button onClick={() => setIsOpen(true)}>Open modal</button>
+      <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)} />
     </div>
-  );
+  )
 }
 
-export default App;
+// export default detectHover(App)
+export default App

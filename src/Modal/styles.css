@@ -1,0 +1,16 @@
+.modal-open {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-open span {
+  padding: 30px;
+  background: white;
+  z-index: 2;
+}
