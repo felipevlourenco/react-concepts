@@ -5,6 +5,7 @@ import Fetch from './Fetch'
 import Modal from './Modal'
 import Palindrome from './Palindrome'
 import Todo from './Todo'
+import Debounce from './Debounce'
 import './App.css'
 
 function App(props) {
@@ -21,6 +22,7 @@ function App(props) {
       <AutoComplete />
       <Todo />
       <Palindrome />
+      <Debounce />
       <button onClick={() => setIsOpen(true)}>Open modal</button>
       <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)} text="<App> Modal" />
     </div>

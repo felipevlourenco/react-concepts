@@ -1,0 +1,9 @@
+.debounce {
+  width: 300px;
+  margin: 30px auto;
+}
+
+.result-area {
+  display: flex;
+  flex-direction: column;
+}
