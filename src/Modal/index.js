@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom'
 import './styles.css'
 
 const ModalBox = props => {
-  const handleModalClick = event => {
+  const handleClickContainer = event => {
     event.stopPropagation()
   }
 
   return (
     <div className={props.isOpen ? 'modal-open' : 'modal-close'} onClick={props.handleClose}>
-      <span onClick={handleModalClick}>{props.text}</span>
+      <div className="container" onClick={handleClickContainer}>
+        <span>{props.text}</span>
+        <button onClick={props.handleClose}>Close</button>
+      </div>
     </div>
   )
 }
