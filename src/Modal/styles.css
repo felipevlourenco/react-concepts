@@ -1,12 +1,13 @@
 .modal-open {
-  position: absolute;
+  position: fixed;
   top: 0;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 
 .modal-open .container {

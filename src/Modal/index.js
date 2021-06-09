@@ -24,11 +24,15 @@ const Modal = props => {
     if (props.isOpen) {
       ref.current = document.createElement('div')
       document.body.appendChild(ref.current)
+      document.body.style = 'overflow-y:hidden; position: relative;'
       ReactDOM.render(<ModalBox {...props} />, ref.current)
     } else {
       if (ref.current) {
+        if (ref.current.parentNode) {
+          ref.current.parentNode.style = 'overflow-y:visible; position: static;'
+          ref.current.parentNode.removeChild(ref.current)
+        }
         ReactDOM.unmountComponentAtNode(ref.current)
-        ref.current.parentNode && ref.current.parentNode.removeChild(ref.current)
       }
     }
   }, [props])
