@@ -9,7 +9,7 @@ const ModalBox = props => {
 
   return (
     <div className={props.isOpen ? 'modal-open' : 'modal-close'} onClick={props.handleClose}>
-      <span onClick={handleModalClick}>test modal</span>
+      <span onClick={handleModalClick}>{props.text}</span>
     </div>
   )
 }

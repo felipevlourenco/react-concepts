@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import './App.css'
 import AutoComplete from './AutoComplete'
 import Counter from './Counter'
 import Fetch from './Fetch'
-// import detectHover from './HOC/detectHover'
 import Modal from './Modal'
 import Palindrome from './Palindrome'
 import Todo from './Todo'
+import './App.css'
 
 function App(props) {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,10 +22,9 @@ function App(props) {
       <Todo />
       <Palindrome />
       <button onClick={() => setIsOpen(true)}>Open modal</button>
-      <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)} />
+      <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)} text="<App> Modal" />
     </div>
   )
 }
 
-// export default detectHover(App)
 export default App

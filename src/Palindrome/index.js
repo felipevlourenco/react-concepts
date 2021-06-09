@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import detectHover from './../HOC/detectHover'
 import './styles.css'
 
 const Palindrome = () => {
@@ -42,4 +43,4 @@ const Palindrome = () => {
   )
 }
 
-export default Palindrome
+export default detectHover(Palindrome)
